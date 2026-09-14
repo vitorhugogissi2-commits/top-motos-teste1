@@ -1,0 +1,36 @@
+{
+  "entities": {
+    "Moto": {
+      "title": "Moto",
+      "description": "Vehicle inventory item for the Top Motos dealership catalog",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "marca": { "type": "string" },
+        "modelo": { "type": "string" },
+        "ano": { "type": "number" },
+        "cilindrada": { "type": "number" },
+        "preco": { "type": "number" },
+        "precoPromocional": { "type": "number" },
+        "emPromocao": { "type": "boolean" },
+        "quilometragem": { "type": "number" },
+        "cor": { "type": "string" },
+        "combustivel": { "type": "string" },
+        "categoria": { "type": "string" },
+        "fotos": { "type": "array" },
+        "descricao": { "type": "string" },
+        "destaque": { "type": "boolean" },
+        "estoque": { "type": "number" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["marca", "modelo", "ano", "preco", "categoria"]
+    }
+  },
+  "firestore": {
+    "/motos/{motoId}": {
+      "schema": "Moto",
+      "description": "Collection of all motorcycle catalog listings"
+    }
+  }
+}
